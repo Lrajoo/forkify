@@ -40,7 +40,7 @@ export default class Recipe{
             //Uniform Units
             let ingredient = el.toLowerCase();
             unitLong.forEach((units, i) => {
-                ingredient = ingredient.replace(units, unitShort[i])
+                ingredient = ingredient.replace(units, units[i])
             });
             //Remove Parentheses
             ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
@@ -95,3 +95,4 @@ export default class Recipe{
         this.servings = newServings;
     }
 }
+
